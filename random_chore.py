@@ -38,7 +38,7 @@ def choose_chore():
 
 
 def remove_chore(chore):
-    """Delete randomly chosen chore from chores_list."""
+    """Remove randomly chosen chore from chores_list."""
     chores_list.remove(chore)
     return chores_list
 
