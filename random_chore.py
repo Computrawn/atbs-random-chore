@@ -47,7 +47,8 @@ for recipient in recipients_list:
     chore_assignment = choose_chore()
     remove_chore(chore_assignment)
     chore_assignments[recipient] = [chore_assignment]
-    logging.info(f"{recipient}: {chore_assignment}")
+    paired_string = f"{recipient}: {chore_assignment}"
+    logging.info(paired_string)
 
 for key, value in chore_assignments.items():
     msg = EmailMessage()
