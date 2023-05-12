@@ -52,7 +52,7 @@ for recipient in recipients_list:
 
 for key, value in chore_assignments.items():
     msg = EmailMessage()
-    msg["Subject"] = "You chore for the week."
+    msg["Subject"] = "Your chore for the week."
     msg["From"] = EMAIL_ADDRESS
     msg["To"] = key
     msg.set_content(f"Your chore for the week is: {value}")
