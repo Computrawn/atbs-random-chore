@@ -19,12 +19,12 @@ logging.basicConfig(
 EMAIL_HOST = os.environ.get("ICLD_SMTP")
 EMAIL_ADDRESS = os.environ.get("ICLD_USER")
 EMAIL_PASSWORD = os.environ.get("ICLD_PASS")
-FRST_ADDY = os.environ.get("TOTA_USER")
-SCND_ADDY = os.environ.get("AUTO_USER")
+TOTA_ADDRESS = os.environ.get("TOTA_USER")
+AUTO_ADDRESS = os.environ.get("AUTO_USER")
 
 recipients_list = [
-    FRST_ADDY,
-    SCND_ADDY,
+    TOTA_ADDRESS,
+    AUTO_ADDRESS,
     EMAIL_ADDRESS,
 ]
 chores_list = ["wash dishes", "clean bathroom", "vacuum house"]
@@ -57,7 +57,7 @@ for key, value in chore_assignments.items():
     msg["To"] = key
     msg.set_content(f"Your chore for the week is: {value}")
 
-    with smtplib.SMTP("smtp.mail.me.com", 587) as smtp:
+    with smtplib.SMTP(EMAIL_HOST, 587) as smtp:
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
