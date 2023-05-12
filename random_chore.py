@@ -46,7 +46,7 @@ def remove_chore(chore):
 for recipient in recipients_list:
     chore_assignment = choose_chore()
     remove_chore(chore_assignment)
-    chore_assignments[recipient] = [chore_assignment]
+    chore_assignments[recipient] = chore_assignment
     paired_string = f"{recipient}: {chore_assignment}"
     logging.info(paired_string)
 
