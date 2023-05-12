@@ -32,7 +32,7 @@ chore_assignments = {}
 
 
 def choose_chore():
-    """Use random module to pick chore."""
+    """Use random choice to pick chore from chores_list."""
     random_chore = random.choice(chores_list)
     return random_chore
 
