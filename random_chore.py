@@ -27,18 +27,18 @@ recipients_list = [
     SCND_ADDY,
     EMAIL_ADDRESS,
 ]
-
-chores_list = ["wash dishes", "clean bathroom", "vaccum house"]
-
+chores_list = ["wash dishes", "clean bathroom", "vacuum house"]
 chore_assignments = {}
 
 
 def choose_chore():
+    """Use random module to pick chore."""
     random_chore = random.choice(chores_list)
     return random_chore
 
 
 def remove_chore(chore):
+    """Delete randomly chosen chore from chores_list."""
     chores_list.remove(chore)
     return chores_list
 
